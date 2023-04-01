@@ -29,8 +29,8 @@ int main(int argc, char *argv[])
         auto double_tags = DbReader::readFromTable("double_tags");
 
         // обрабатываем прочитанные данные
-        auto parsed_data = DbDataParser::processData(bool_tags);
-        auto double_data = DbDataParser::processData(double_tags);
+        auto parsed_data = DbDataParser::processData(std::move(bool_tags));
+        auto double_data = DbDataParser::processData(std::move(double_tags));
         parsed_data.insert(            // перемещаем данные из второго вектора в первый
                     parsed_data.end(),
                     std::make_move_iterator(double_data.begin()),

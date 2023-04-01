@@ -16,7 +16,7 @@ class DbDataParser
 private:
 
 public:
-    static std::vector<std::shared_ptr<SensorRecord>> processData(std::shared_ptr<QSqlQueryModel> model);
+    static std::vector<std::shared_ptr<SensorRecord>> processData(std::shared_ptr<QSqlQueryModel>&& model);
 };
 
 #endif // DBDATAPARSER_H

@@ -16,7 +16,7 @@ class DataSaver
 public:
     DataSaver();
 
-    static void saveToXml(std::vector<std::shared_ptr<SensorRecord>> data_rows);
+    static void saveToXml(const std::vector<std::shared_ptr<SensorRecord>>& data_rows);
 };
 
 #endif // DATASAVER_H

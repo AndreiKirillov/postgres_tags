@@ -1,6 +1,6 @@
 #include "DbDataParser.h"
 
-std::vector<std::shared_ptr<SensorRecord>> DbDataParser::processData(std::shared_ptr<QSqlQueryModel> model)
+std::vector<std::shared_ptr<SensorRecord>> DbDataParser::processData(std::shared_ptr<QSqlQueryModel>&& model)
 {
     std::vector<std::shared_ptr<SensorRecord>> data_rows;
 

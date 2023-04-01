@@ -5,7 +5,7 @@ DataSaver::DataSaver()
 
 }
 
-void DataSaver::saveToXml(std::vector<std::shared_ptr<SensorRecord> > data_rows)
+void DataSaver::saveToXml(const std::vector<std::shared_ptr<SensorRecord>>&  data_rows)
 {
     QDomDocument document("VestaInpData");
     QDomElement root_elem = document.createElement("VestaInpData");
