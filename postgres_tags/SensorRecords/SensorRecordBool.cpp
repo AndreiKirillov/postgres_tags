@@ -30,7 +30,7 @@ QDomElement SensorRecordBool::convertToXml(QDomDocument &xml_root_doc)
 
     // Задаём значение
     QDomAttr value_attribute = xml_root_doc.createAttribute("Value");
-    value_attribute.setValue(_bool_value ? "true":"false");
+    value_attribute.setValue(_bool_value ? "1":"0");
     parameter_elem.setAttributeNode(value_attribute);
 
     return parameter_elem;
